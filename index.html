@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />	
+	<style>
+	
+	body{
+		background: #ffffDD;
+	}
+	
+	#mainCanvas {
+    	background: #ffffff;
+    	position: absolute;
+        z-index: 0;
+        display:block;
+        margin: 0.5em auto; 
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    #enemies{
+    	position:relative;
+    	float:right;
+    	width:300px;
+    }
+    
+    #leftConverter, #middleConverter, #rightConverter{
+    	background: #ffffff;
+    	position:relative;
+    	
+    	z-index: 0;
+    }
+    
+    #playControls{
+    	position:relative;
+    	padding-left:50px;
+    	padding-top:5px;
+    }
+    
+    #playButton, #saveButton, #drawButton{
+    	width:50px;
+    	height:30px;
+    	font-family:"Verdana";
+    	color:#ffffff;
+    	margin-right:10px;
+    	background-color:#000000;
+    }
+    
+    #controls{
+    	position: absolute;
+    	display:block;
+        margin: 0.5em auto; 
+        z-index: 2;
+    }
+    
+    #colorSelector{
+    	position:relative;
+    	margin-left:180px;
+    	margin-top:100px;
+    }
+    
+    .color{
+    	position:relative;
+    	margin-right:10px;
+    	width:75px;
+    }
+    
+	</style>
+	<title>Alan Leeson Experience</title>
+</head>
+
+<body>
+	<canvas id="mainCanvas" width='700' height='500'>
+	Get a real browser!
+	</canvas>
+	<script src="js/loader.js"></script>
+	<script src="js/experience.js"></script>
+	<script src="js/player.js"></script>
+	<script src="js/drawHandler.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/bullet.js"></script>
+	<script src="js/enemy.js"></script>
+	
+	<div id="controls">
+		<div id="playControls">
+			<span><input id="playButton" type="button" value="Play"/></span>
+			<span><input id="saveButton" type="button" value="Save"/></span>
+			<span><input id="drawButton" type="button" value="Draw"/></span>
+		</div>
+		<div id="colorSelector">
+			<span><input class="color" id="colorRed" style="background-color:#99001C;" type="button""/></span> 
+			<span><input class="color" id="colorBlue" style="background-color:#000080;"  type="button"/></span> 
+			<span><input class="color" id="colorGreen" style="background-color:#038D49;"  type="button"/></span>
+			<span><input class="color" id="colorPurple" style="background-color:#7C4691;" type="button"/></span> 
+		</div>
+	</div>
+	
+	<div id="enemies">
+	<canvas id="leftConverter" width="200" height="200">
+		lolz
+	</canvas>
+	<canvas id="middleConverter" width="200" height="200">
+		lolz
+	</canvas>
+	<canvas id="rightConverter" width="200" height="200">
+		lolz
+	</canvas>
+	</div>
+	
+</body>
+
+</html>
